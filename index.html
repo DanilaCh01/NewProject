@@ -2,12 +2,70 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>newproject</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>New Project</title>
   </head>
   <body>
-    <div id="app"></div>
+    <header class="header">
+      <div class="container header__container">
+        <a href="/" class="header__logo">
+          <img class="header__logotype" src="./src/assets/logo.svg" alt="whitepace" />
+          <span class="header__name">whitepace</span>
+        </a>
+
+        <div class="header__wrapper-second">
+          <nav class="header__nav nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#" class="nav__link">
+                  Products
+                  <img src="./src/assets/down-arrow.svg" alt="" class="nav__arrow" />
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">
+                  Solutions
+                  <img src="./src/assets/down-arrow.svg" alt="" class="nav__arrow" />
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">
+                  Resources
+                  <img src="./src/assets/down-arrow.svg" alt="" class="nav__arrow" />
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">
+                  Pricing
+                  <img src="./src/assets/down-arrow.svg" alt="" class="nav__arrow" />
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="header__wrapper">
+            <div class="header__actions actions">
+              <button class="actions__btn actions__btn--login">Login</button>
+              <button class="actions__btn actions__btn--try">
+                Try Whitepace free
+                <img src="./src/assets/right-arrow.svg" alt="Arrow right" />
+              </button>
+            </div>
+
+            <button class="header__menu-btn">
+              <img src="./src/assets/menu-button.svg" alt="Open menu" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

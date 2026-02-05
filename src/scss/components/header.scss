@@ -1,0 +1,155 @@
+@use '../utils/variables' as *;
+
+.header {
+  background-color: $color-white;
+  height: 56px;
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+
+  @include tablet {
+    height: 66px;
+    padding: 16px 32px;
+  }
+
+  @include desktop-sm {
+    height: 92px;
+  }
+
+  @include desktop-lg {
+    padding: 16px 220px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  &__wrapper-second {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: $color-blue;
+    width: 134px;
+
+    @include tablet {
+      width: 191px;
+    }
+  }
+
+  &__logotype {
+    width: 25.95px;
+    height: 20.35px;
+
+    @include tablet {
+      width: 37px;
+      height: 29px;
+    }
+  }
+
+  &__name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    line-height: 100%;
+    font-size: 19.64px;
+
+    @include tablet {
+      font-size: 28px;
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @include desktop-md {
+      display: block;
+    }
+  }
+
+  .nav__list {
+    display: flex;
+    white-space: nowrap;
+    gap: 32px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: $color-blue;
+  }
+
+  .nav__link {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 42px;
+    height: 26px;
+
+    @include desktop-md {
+      display: none;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 24px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+
+  &__btn {
+    display: none;
+
+    @include desktop-sm {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 8px;
+    }
+
+    &--login {
+      width: auto;
+      height: 60px;
+      padding: 16px 40px;
+      background-color: $color-yellow;
+      color: $color-dark-blue;
+    }
+
+    &--try {
+      display: none;
+
+      @include desktop-sm {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        background-color: $color-blue;
+        color: $color-white;
+        gap: 10px;
+      }
+
+      img {
+        width: 10px;
+        height: auto;
+        flex-shrink: 0;
+      }
+    }
+  }
+}
