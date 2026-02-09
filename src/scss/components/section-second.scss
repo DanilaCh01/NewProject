@@ -1,34 +1,34 @@
 @use '../utils/variables' as *;
 
-.hero {
+.section-second {
   display: flex;
-  background-image: url('/src/assets/hero/mobile-element.png');
+  background-image: url('/src/assets/section-second/mobile-background.png');
+  background-repeat: no-repeat;
   background-color: $color-white;
   height: 815px;
   padding: 80px 16px;
   border: 1px solid #e0e0e0;
 
   @include tablet {
-    background-image: url('/src/assets/hero/tablet-element.png');
+    background-image: url('/src/assets/section-second/tablet-background.png');
     height: 1050px;
     padding: 140px 20px 100px;
   }
 
   @include desktop-sm {
-    background-image: url('/src/assets/hero/desktop-sm-element.png');
+    background-image: url('/src/assets/section-second/desktop-sm-background.png');
     height: 640px;
-    padding: 140px 32px;
+    padding: 140px 32px 100px;
   }
 
   @include desktop-md {
-    background-image: url('/src/assets/hero/desktop-md-element.png');
+    background-image: url('/src/assets/section-second/desktop-md-background.png');
     height: 655px;
-    padding: 100px 32px;
     justify-content: center;
   }
 
   @include desktop-lg {
-    background-image: url('/src/assets/hero/desktop-lg-element.png');
+    background-image: url('/src/assets/section-second/desktop-lg-background.png');
     height: 830px;
     padding: 140px 220px;
   }
@@ -36,7 +36,7 @@
   &__container {
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 60px;
     max-width: calc(1440px - 32px);
     width: 100%;
     align-items: center;
@@ -44,7 +44,7 @@
 
     @include desktop-sm {
       flex-direction: row;
-      gap: 80px;
+      gap: 90px;
     }
   }
 
@@ -64,6 +64,7 @@
   &__content-wrapper {
     display: flex;
     flex-direction: column;
+    color: $color-black;
     gap: 24px;
   }
 
@@ -77,14 +78,27 @@
     font-weight: 700;
     font-size: 36px;
     line-height: 100%;
-    color: $color-blue;
+    background-image: url('/src/assets/section-second/mobile-text-background.png');
+    background-repeat: no-repeat;
+    // background-position: 100% 150%;
 
     @include tablet {
       font-size: 54px;
+      background-image: url('/src/assets/section-second/tablet-text-background.png');
     }
 
     @include desktop-sm {
       font-size: 64px;
+      background-image: url('/src/assets/section-second/desktop-sm-text-background.png');
+    }
+
+    @include desktop-md {
+      font-size: 72px;
+      background-image: url('/src/assets/section-second/desktop-md-text-background.png');
+    }
+
+    @include desktop-lg {
+      background-image: url('/src/assets/section-second/desktop-lg-text-background.png');
     }
   }
 
@@ -92,7 +106,6 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
-    color: $color-blue;
   }
 
   &__image {
@@ -100,11 +113,17 @@
   }
 
   .btn--primary {
+    @include tablet {
+      font-weight: 500;
+      line-height: 100%;
+      size: 16px;
+      height: 60px;
+    }
+
     @include desktop-sm {
       line-height: 24px;
-      font-weight: 500;
+      size: 18px;
       height: 65px;
-      padding: 20px;
     }
   }
 }
