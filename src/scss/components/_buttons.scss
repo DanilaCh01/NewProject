@@ -1,0 +1,35 @@
+@use 'sass:color';
+@use '../utils/variables' as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  padding: 20px 40px;
+  border-radius: 8px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  white-space: nowrap;
+  gap: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+
+  &--primary {
+    background-color: $color-blue;
+    color: $color-white;
+
+    &:hover {
+      background-color: color.adjust($color-blue, $lightness: -10%);
+      transform: translateY(-2px);
+    }
+  }
+
+  &__icon {
+    width: 14px;
+    height: auto;
+    flex-shrink: 0;
+  }
+}

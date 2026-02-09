@@ -1,0 +1,110 @@
+@use '../utils/variables' as *;
+
+.hero {
+  display: flex;
+  background-image: url('/src/assets/mobile-element.png');
+  background-color: $color-white;
+  height: 815px;
+  padding: 80px 16px;
+  border: 1px solid #e0e0e0;
+
+  @include tablet {
+    background-image: url('/src/assets/tablet-element.png');
+    height: 1050px;
+    padding: 140px 20px 100px;
+  }
+
+  @include desktop-sm {
+    background-image: url('/src/assets/desktop-sm-element.png');
+    height: 640px;
+    padding: 140px 32px;
+  }
+
+  @include desktop-md {
+    background-image: url('/src/assets/desktop-md-element.png');
+    height: 655px;
+    padding: 100px 32px;
+    justify-content: center;
+  }
+
+  @include desktop-lg {
+    background-image: url('/src/assets/desktop-lg-element.png');
+    height: 830px;
+    padding: 140px 220px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    max-width: calc(1440px - 32px);
+    width: 100%;
+    align-items: center;
+    height: 100%;
+
+    @include desktop-sm {
+      flex-direction: row;
+      gap: 80px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    text-align: center;
+
+    @include desktop-sm {
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__button-wrapper {
+    display: flex;
+    justify-self: center;
+    gap: 16px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    color: $color-blue;
+
+    @include tablet {
+      font-size: 54px;
+    }
+
+    @include desktop-sm {
+      font-size: 64px;
+    }
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: $color-blue;
+  }
+
+  &__image {
+    max-width: fit-content;
+  }
+
+  .btn--primary {
+    @include desktop-sm {
+      line-height: 24px;
+      font-weight: 500;
+      height: 65px;
+      padding: 20px;
+    }
+  }
+}

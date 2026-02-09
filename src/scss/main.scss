@@ -1,4 +1,6 @@
 @use './utils/variables';
 @use './base/reset';
-//@use './base/base';
+@use './base/base';
+@use './components/buttons';
 @use './components/header';
+@use './components/hero';

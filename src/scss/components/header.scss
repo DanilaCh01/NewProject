@@ -1,6 +1,8 @@
 @use '../utils/variables' as *;
 
 .header {
+  display: flex;
+  justify-content: center;
   background-color: $color-white;
   height: 56px;
   padding: 16px;
@@ -19,8 +21,20 @@
     padding: 16px 220px;
   }
 
+  &__btn {
+    display: none;
+    height: 60px;
+    padding: 16px 24px;
+
+    @include desktop-sm {
+      display: inline-flex;
+    }
+  }
+
   &__container {
     display: flex;
+    max-width: calc(1440px - 32px);
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     height: 100%;
